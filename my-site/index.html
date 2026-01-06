@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>猫カフェ うたたね</title>
+
+<!-- Canvaっぽい丸ゴシック -->
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* =====================
+   基本設定
+===================== */
+body {
+  margin: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
+  background: #fffaf6;
+  color: #6b5a4a;
+}
+
+section {
+  padding: 90px 6%;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 32px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+/* =====================
+   ヒーロー（Canva完全寄せ）
+===================== */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* 小さい「猫カフェ」 */
+.hero-sub {
+  position: absolute;
+  right: 160px;
+  top: 42%;
+  font-size: 16px;
+}
+
+/* 店名ふきだし */
+.hero-title {
+  position: absolute;
+  right: 120px;
+  top: 48%;
+  background: #ffffff;
+  padding: 26px 46px;
+  border-radius: 999px;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* =====================
+   コンセプト
+===================== */
+.concept {
+  text-align: center;
+  font-size: 22px;
+  padding: 60px 6% 30px;
+}
+
+/* =====================
+   Enjoy（画像ドン＋px配置）
+===================== */
+.enjoy-area {
+  position: relative;
+}
+
+.enjoy-area img {
+  height: 620px;
+  object-fit: cover;
+}
+
+/* ラベル（px指定でCanva寄せ） */
+.enjoy-label {
+  position: absolute;
+  background: #6b5a3a;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 18px;
+}
+
+.label-play  { top: 140px; left: 120px; }
+.label-date  { top: 200px; right: 140px; }
+.label-study { bottom: 180px; left: 260px; }
+.label-food  { bottom: 140px; right: 160px; }
+
+.enjoy-text {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+/* =====================
+   店舗情報（写真大）
+===================== */
+.info {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.info img {
+  height: 480px;
+  object-fit: cover;
+}
+
+.info p {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* =====================
+   料金
+===================== */
+.price-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 22px;
+  border: 1px solid #d2c2ad;
+  text-align: center;
+}
+
+th {
+  background: #7a6a5a;
+  color: white;
+}
+
+.price {
+  color: red;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.drink {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+/* =====================
+   予約
+===================== */
+.reserve {
+  text-align: center;
+}
+
+.reserve img {
+  width: 260px;
+  margin-top: 30px;
+}
+
+/* =====================
+   スマホ対応
+===================== */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 5%;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    right: 40px;
+  }
+
+  .hero-sub {
+    right: 40px;
+  }
+
+  .enjoy-area img {
+    height: 420px;
+  }
+
+  .enjoy-label {
+    font-size: 14px;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== ヒーロー ===== -->
+<section class="hero">
+  <img src="https://example.com/hero.jpg" alt="猫">
+  <div class="hero-sub">猫カフェ</div>
+  <div class="hero-title">うたたね</div>
+</section>
+
+<!-- ===== コンセプト ===== -->
+<section class="concept">
+  猫と一緒に安らぐ時間を提供
+</section>
+
+<!-- ===== Enjoy ===== -->
+<section>
+  <h2>How to Enjoy</h2>
+
+  <div class="enjoy-area">
+    <img src="https://example.com/enjoy.jpg" alt="楽しみ方">
+
+    <div class="enjoy-label label-play">猫と遊ぶ</div>
+    <div class="enjoy-label label-date">デート</div>
+    <div class="enjoy-label label-study">勉強</div>
+    <div class="enjoy-label label-food">お食事</div>
+  </div>
+
+  <div class="enjoy-text">楽しみ方は自由 ♪</div>
+</section>
+
+<!-- ===== 店舗情報 ===== -->
+<section class="info">
+  <img src="https://example.com/shop.jpg" alt="店内">
+
+  <div>
+    <p>住所：愛知県京吾市井伊部位987-1</p>
+    <p>電話番号：080-XXXX-XXXX</p>
+    <p>営業時間：10:00〜21:00</p>
+    <p>定休日：毎月29日</p>
+    <p>年齢制限：3才から入場可能です。</p>
+  </div>
+</section>
+
+<!-- ===== 料金 ===== -->
+<section>
+  <h2>料金</h2>
+
+  <div class="price-wrapper">
+    <table>
+      <tr>
+        <th></th>
+        <th>10分あたり</th>
+        <th>最大料金</th>
+      </tr>
+      <tr>
+        <td>平日</td>
+        <td class="price">¥200（220）</td>
+        <td class="price">¥2,400（2,640）</td>
+      </tr>
+      <tr>
+        <td>土日祝・特定日</td>
+        <td class="price">¥250（275）</td>
+        <td class="price">¥2,700（2,970）</td>
+      </tr>
+    </table>
+
+    <div class="drink">
+      別途ドリンクバー代 <span class="price">¥350（385）</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 予約 ===== -->
+<section class="reserve">
+  <p>予約はこちらから</p>
+  <img src="https://example.com/reserve.png" alt="予約する">
+</section>
+
+</body>
+</html>
